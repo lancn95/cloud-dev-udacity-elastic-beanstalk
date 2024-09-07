@@ -1,9 +1,9 @@
 import jwt from "jsonwebtoken";
-import { PRIVATE_KEY, PUBLIC_KEY } from "../../keys.js";
-
+import secretsService from "./secretsService.js";
 
 class TokenService {
-  generateTokens(user) {
+  async generateTokens(user) {
+    const PRIVATE_KEY = await secretsService.getSecret("tweets-app-jwt-private-key")
     const accessToken = jwt.sign(
       {
         email: user.email,
@@ -31,7 +31,13 @@ class TokenService {
     return decodedToken;
   }
 
-  verifyToken(token) {
+  async verifyToken(req) {
+    if (!req.headers.authorization) {
+        throw new Error("Missing Authorization header");
+    }
+    const PUBLIC_KEY = await secretsService.getSecret("tweets-app-jwt-public-key")
+    const authHeader = req.headers.authorization;
+    const token = authHeader.split(" ")[1];
     const decodedToken = jwt.verify(token, PUBLIC_KEY)
     return decodedToken;
   }

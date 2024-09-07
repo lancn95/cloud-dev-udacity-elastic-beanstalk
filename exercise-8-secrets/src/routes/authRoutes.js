@@ -15,7 +15,7 @@ router.post("/token", async (req, res) => {
     if (!await passwordService.verifyPassword(password, user.hashedPassword, user.salt)) {
       return res.status(401).json({ message: "Unauthorized" });
     }
-    const { accessToken, refreshToken } = tokenService.generateTokens(user);
+    const { accessToken, refreshToken } = await tokenService.generateTokens(user);
     return res.json({ access_token: accessToken, refresh_token: refreshToken, token_type: "bearer" });
   } catch (error) {
     console.error("Get token error", error)
