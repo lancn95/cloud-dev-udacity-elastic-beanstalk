@@ -3,7 +3,7 @@ import multerS3 from "multer-s3";
 import { S3Client } from "@aws-sdk/client-s3";
 import AWSXRay from 'aws-xray-sdk'
 
-const S3_BUCKET_NAME = "udacity-tweets-bucket";
+const S3_BUCKET_NAME = "my-643958466408-bucket";
 
 const s3 = new S3Client({
     credentials: {
