@@ -27,7 +27,16 @@ eb deploy
 ```
 for deploy a new version
 
+## FilterImages
+```bash
+curl --location 'http://cloud-dev-elastic-beanstalk-dev.us-west-2.elasticbeanstalk.com/filteredImage?image_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fb%2Fbd%2FGolden_tabby_and_white_kitten_n01.jpg'
+```
+![About to upload](upload.png)
+
+
 ## Upload File
+
+
 ```bash
 curl --location 'http://exercise-7-authentication-dev.us-east-1.elasticbeanstalk.com/images/' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwidG9rZW5UeXBlIjoiQUNDRVNTX1RPS0VOIiwiaWF0IjoxNzI1Njk4MzU2LCJleHAiOjE3MjU2OTg3MTZ9.Byv6H9MKYhcZZrWGgYjpE78jrHXg8L6t4lZzn6MWsAAEEGA69BunZOoquJ5NJ0JreRjwYshRBgWoia0-0W4bz294yORxDvDigkc7ABeqwbUeFkdMorYVqI090hfCm9F9jSuagTq14keyFCzLn0r_31JT3XHV-v3ZD6qKsmnaD4kZNkjgFrEhi5mpWH3I2zE_ukk1x2giEEh0MdJ9VXC1JdEVmqVCHdYXbhB31zbH34iNtnjJ6g4Jt9thqFXqZk5OCZ6GKmSSa6rtHWqegNhG02kQQP2S5X3MGlCq56t3Q5YVTAdte5NkG8wgYFFX3RJXy8U8SRKOIsVGwOWyJC0_Q54mNZIJjWbCp7utX69js1Dh5aG9gXX8AEiMTohN5w2WI8Jj26LMU8X6nV7JGf6rH93Xcd439jUqmtbVXmBFuAvDBB1mT1tkd0E086jnVO6e_4zuDC9XDo3MhFahv07MmSBFZH4DpdCXftcRMVWU7L-JvOPdlTDrYriQkB5Qo7JrA8NAWhym0FAwLpIZeWin5a8EWW0TAbCWJ9Y-mgdlJ5d5XjdMV1bbHqsISl6gHdI6XEm0Rftv96Kf7N7WKCipjp1BnIfuzOgUO4H8o19ort9HvuTkJRuf4K0TA6pslxYY_rcD2lVC1WSI570ShUj9CZiDKDQ2MVObEcP7S_-r4bA' \
