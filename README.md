@@ -28,6 +28,7 @@ eb deploy
 for deploy a new version
 
 ## FilterImages
+![About to upload](be.png)
 ```bash
 curl --location 'http://cloud-dev-elastic-beanstalk-dev.us-west-2.elasticbeanstalk.com/filteredImage?image_url=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fb%2Fbd%2FGolden_tabby_and_white_kitten_n01.jpg'
 ```
